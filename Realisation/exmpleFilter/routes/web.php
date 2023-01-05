@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\tacheController;
+use App\Http\Controllers\TutorialController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -20,5 +21,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/pagination',[tacheController::class,'index']);
 Route::post('pagination/fetch',[tacheController::class,'fetch'])->name('pagination.fetch');
 
+Route::get('/', [TutorialController::class,'index'])->name('pagination.fetch');
 
 
