@@ -37,6 +37,7 @@
                             @endforeach
                         </select>
 
+
                     </div>
 
                     <div class="search-box">
@@ -79,6 +80,7 @@
 
       </tbody>
   </table>
+
   <div class="d-flex justify-content-between">
       <div class="d-flex justify-content-start">
           {!! $tasks->links() !!}
@@ -120,6 +122,7 @@
 </div>
 </div>
 </div>
+
 
 
 <script type="text/javascript">

@@ -7,6 +7,7 @@ use App\Models\PreparationTache;
 use Illuminate\Http\Request;
 use App\Exports\TaskExport;
 use App\Imports\TaskImport;
+use App\Models\Tache;
 use App\Models\Task;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Auth\Access\Response;
@@ -30,8 +31,8 @@ class PreparationTacheController extends Controller
     {
         $brief=PreparationBrief::all();
         $count =PreparationTache::count();
-
-        $tasks =PreparationTache::paginate(3);
+        $tasks=PreparationTache::paginate(3);
+        
 
         // $pagination = PreparationTache::paginate($tasks);
 
