@@ -16,5 +16,5 @@ class tacheController extends Controller
           $tache=  tache::paginate(5);
           return view('pagination_child',compact('tache'))->render();
         }
-    } 
+    }
 }
