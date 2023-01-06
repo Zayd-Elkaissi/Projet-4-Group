@@ -43,7 +43,7 @@ Route::group(['prefix'=>LaravelLocalization::setLocale(),'middleware' => [ 'loca
     route::get('/generatepdf',[PreparationTacheController::class,'generatepdf'])->name('generate');
 
 });
-Route::get('dashboard',[DashboardController::class,"index"])->name('dashboard');;
+Route::get('dashboard',[DashboardController::class,"index"])->name('dashboard');
 
 Route::get('google-auth',[googleController::class,'redirect'])->name('google-auth');
 Route::get('auth/google/call-back',[googleController::class,'callbackGoogle']);
