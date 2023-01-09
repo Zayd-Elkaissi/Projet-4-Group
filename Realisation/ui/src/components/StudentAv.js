@@ -39,24 +39,45 @@ export class StudentAv extends Component {
       }
   render() {
     return (
-      <div>
-        <h4>Etat d'avancement des apprenants</h4>
-        <div className='studentAv'>
-            <select onChange={this.onChange}  placeholder="Brief" id="input">
-              <option>Brief</option>
-              {this.props.data.map((item) => (
-                <option value={item?.id}>{item?.Nom_du_brief}</option>
-              ))}
-            </select>
-            <div>
-                {this.state.students_av.map(item =>(
-                    <><p>{item.student_name}</p>
-                    <ProgressBar now={item.av} label={`${item.av}%`}/>
-                    </>
-                ))}
+       <div className="row">
+       <div className="col-md-12" style={{ marginLeft: 30, marginTop: 51}}>
+        <div className="card">
+        
+          {/* /.card-header */}
+          <div className="card-body">
+            <div className="row">
+              
+              {/* /.col */}
+              <div className="col-md-12">
+                <p className="text-center">
+                  <strong>Etat d'avancement des apprenants</strong>
+                </p>
+                <div className="progress-group">
+                  <select onChange={this.onChange}  placeholder="Brief" id="input">
+                     <option>Brief</option>
+                       {this.props.data.map((item) => (
+                     <option value={item?.id}>{item?.Nom_du_brief}</option>
+                       ))}
+                 </select>
+                  <div className="progress progress-sm" id='progress'>
+                 {this.state.students_av.map(item =>(
+                     <div>
+                        <p>{item.student_name}</p>
+                    <div className="progress-bar bg-primary" style={{width:`${item.av}%`}}  label={`${item.av}%`}>{item.av}%</div>
+                  </div>
+                    ))}
+                </div>  
+              </div>
+              
             </div>
+           
+          </div>
+       
         </div>
-      </div>
+    </div>
+ 
+   </div>
+   </div>
     )
   }
 }

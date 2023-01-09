@@ -1,2 +1,2 @@
-<script type="text/javascript" src="{{ URL::asset('assets/js/static/js/main.2a4fcb34.js') }}"></script>
-<link href="{{ URL::asset('assets/js/static/css/main.e0e34232.css') }}" rel="stylesheet">
+<script type="text/javascript" src="{{ URL::asset('assets/js/static/js/main.fff6c21f.js') }}"></script>
+<link href="{{ URL::asset('assets/js/static/css/main.ca7e5053.css') }}" rel="stylesheet">

@@ -3,6 +3,7 @@ import axios from "axios";
 import StudentAv from "./StudentAv";
 import BriefAv from "./BriefAv";
 import { GroupAv } from './GroupAv';
+import { Container, Navbar } from "react-bootstrap";
 
 
 export default class Header extends Component {
@@ -57,7 +58,17 @@ export default class Header extends Component {
       <div>
         <div className="row">
           <div className="col-md-8">
-            <h1>tableau de borde d'état d'avancement</h1>
+          <div className="row info">
+            <div className="col-md-4">
+            <img src={"img/groupe/"+ this.state.group.Logo}></img>
+              <span>{this.state.group.Nom_groupe}</span>
+            </div>
+            <div className="col-md-4 info">
+              <p>{this.state.studentCount} apprenants</p>
+            </div>
+            <div className="col-md-4"></div>
+          </div>
+       
           </div>
           <div className="col-md-4 selectY">
             <select onChange={this.getData} placeholder="année" id="input">
@@ -68,28 +79,30 @@ export default class Header extends Component {
             </select>
           </div>
 
-          <div className="row info">
-            <div className="col-md-4">
-              <img src={this.state.group.Logo} alt="logo"></img>
-              <span>{this.state.group.Nom_groupe}</span>
-            </div>
-            <div className="col-md-4 info">
-              <p>{this.state.studentCount} apprenants</p>
-            </div>
-            <div className="col-md-4"></div>
-          </div>
+          
         </div>
-
-        <div className="row etatAv">
-            <div className="col-md-6">
+      <div className="row">
+        <div className=" etatAv col-md-6">
+            <div >
                 <GroupAv data={this.state.group_av}/>
                 <BriefAv data={this.state.briefs_av} />
             </div>
-            <div className="col-md-6 etatAvSt">
+        </div>
+            <div className="col-md-5 etatAvSt">
                 <StudentAv data={this.state.brief_affs}/>
             </div>
-        </div>
       </div>
+  </div>
+
+      // <div className="row">
+      //      <div className="col-4">
+      //       <h1>dddd</h1>
+      //       </div>   
+      //      <div className="col-4">
+      //       <h1>dddd</h1>
+      //       </div>   
+      // </div>
+           
     );
   }
 }
