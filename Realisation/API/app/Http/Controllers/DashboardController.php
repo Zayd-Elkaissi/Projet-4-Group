@@ -115,8 +115,9 @@ class DashboardController extends Controller
         return response()->json([
             'arr'   => $arr,
         ]);
-
+        
     }
+}
 
 
     //get the last year
@@ -172,4 +173,3 @@ class DashboardController extends Controller
 //             'group_av' => $group_av
 //         ];
 // }
-}
