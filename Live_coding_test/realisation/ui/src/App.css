@@ -1,0 +1,82 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+h1{
+    color: #0000009f;
+    font-weight: 300;
+}
+
+.selectY{
+    text-align: end;
+}
+
+select{
+    border: #0000009f solid 2px;
+    border-radius: 4px;
+    padding: 7px 28px;
+    margin-top: 0.7em;
+}
+
+span{
+    margin-left: 1em;
+}
+
+.etatAv{
+    margin-top: 2em;
+}
+
+.etatAvSt{
+    /* text-align: center; */
+
+}
+
+
+/* <?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Groupes;
+use Illuminate\Http\Request;
+use App\Models\AnneFormation;
+
+class DashboardController extends Controller
+{
+    //
+    public function years()
+    {
+        $years = AnneFormation::all();
+        return $years;
+    }
+
+    public function formation(Request $request, $id)
+    {
+        $year = AnneFormation::findOrFail($id);
+        $group = Groupes::where('Annee_formation_id', $year->id)->first();
+        array_pop($total_tasks_briefs);
+        array_pop($total_tasksDone_briefs);
+        $total_tasks_briefs_count = array_sum($total_tasks_briefs);
+        $total_tasksDone_briefs_count = array_sum($total_tasksDone_briefs);
+        if($total_tasks_briefs_count != 0){
+            $group_av = (100/$total_tasks_briefs_count)*$total_tasksDone_briefs_count;
+        }else{
+            $group_av = 0;
+        }
+        return [
+            'year' => $year,
+            // 'group' => $group,
+            'group_av' => $group_av
+        ];
+    }
+
+  
+
+public function index(){
+    return view('adminDashboard');
+}
+} */
+
+
